@@ -1,0 +1,377 @@
+/*******************************************************
+  __  __       _         ____  _         _
+ |  \/  | __ _(_)_ __   / ___|| |_ _   _| | ___ ___
+ | |\/| |/ _` | | '_ \  \___ \| __| | | | |/ _ \ __|
+ | |  | | (_| | | | | |  ___) | |_| |_| | |  __\__ \
+ |_|  |_|\__,_|_|_| |_| |____/ \__|\__, |_|\___|___/
+                                   |___/           
+These styles define the main structure of my document
+*******************************************************/
+/******************************************************************
+* This is the body, since it encloses everything the user sees, 
+* it is used to set the main styling cross-site
+* The only higher element is html, and it is valid to style it,
+* although in practice it is rarely used (short of applying a few IE hacks)
+* as it makes no sense from a semantic point of view
+***********************************************************************/
+body{
+	color: #8B8B8B; /** Main font color throughout the whole page **/
+	font: 14px "Helvetica Neue","Lucida Grande","Arial";/** size of font used throughout the whole page **/
+	background:url("../images/bg.jpg") repeat scroll 0 0 #1C1C1C;
+}
+/**************************************************
+* This applies to our div of ID "MainWrapper" 
+* In practice, it also applies styles on the whole
+* site, but usage is usually to just use it to
+* set the website's width and a background.
+**************************************************/
+#MainWrapper{
+	width:960px; /** this is my website's default width **/
+	margin:0 auto; /** this centers MainWrapper in the viewport **/
+	background:url("../images/bg-static.jpg") no-repeat scroll 50% 0; /** this sets the background **/
+}
+/********************************************
+* This is the styles of my headers and my 
+* legends. Legends are the headers used 
+* in forms. You could equally use headers
+* in forms, it is just an old-school way
+* of doing things
+*********************************************/
+h1, h2, h3, h4, legend{
+    color: white; /** my headers font is now white **/
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6); /** I am giving a black shadow to text which is opaque 60% **/
+}
+/***********************************************
+* This sets what sections are. Sections in our
+* case are the header and body and footer
+***********************************************/
+.section{
+	display:block;
+	clear:both;
+}
+/***************************************************
+* Setting up the style for the main links now.
+* having a comma between selectors allows to apply
+* in one time the same styling to multiple selectors
+* it is equivalent to copy-pasting the styles for
+* different selectors.
+* - the ":link" selector is used to discriminate <a>
+* that are links. Yes, <a> can sometime not be a link,
+* for example if href is empty. The browser default is
+* blue underlined
+* - The ":visited" selector applies to links the user
+* has clicked on. The default is purple.
+* - The ":active" selector applies to links that the user
+* is clicking on. In practice they show half a second
+* before the next page loads, but if the user does
+* not release the mouse button, it can show longer
+*****************************************************/
+a, a:link, a:visited, a:active{
+	color:#FFFFFF; /** our links will be white **/
+	text-decoration:none;/** and they won't be underlined **/
+}
+/** ":hover" applies to links that the mouse is hovering over 
+* (meaning the user is passing over the link with her mouse
+**/
+a:hover{color:#CCCCCC;} /** our links will be grey when hovered **/
+/**********************************************************
+* So now the most important thing in our page: the blocks
+* the following style applies to any element that has a class
+* of "block"
+* they will float left, meaning they stack on the left.
+***********************************************************/
+.block{
+	background:#0C0C0C; /** This sets the background to a dark color **/
+	-webkit-border-radius: 20px; /** this sets the rounded borders in chrome/safari **/
+	-moz-border-radius: 20px; /** this sets the rounded borders in firefox **/
+	border-radius: 20px;  /** this sets the rounded borders in standard-compliant browsers **/
+	float:left; /** this allows all divs of class block to stack on the left **/
+	margin:5px 5px 5px 5px; /** This sets a margin of 5px all around, the order is: top right bottom left (clockwise) **/
+	padding:10px 10px; /** this sets 10px for top and bottom and 10px for left and right (yes, I don't need to write it twice, I do this so you have a reference) **/
+	width:290px;/** finally, this sets my block's width **/
+}
+/*****************************************
+* This is an example of targeting a more
+* specific element. We are targeting all
+* <H2>'s that are INSIDE a "block".
+* This will target ANY <h2> inside an
+* element of "block" class, regardless of
+* how deep the <h2> is nested. If we wanted
+* to target only the closest h2 element,
+* we could use ">" instead of a space.
+* .block>h2 would mean:
+* "target all h2 that are direct children
+* of a block.
+******************************************/
+.block h2{margin-top:0;}
+/*** END MAIN STYLES ***/
+
+/********************************************************************
+  _   _                 ___       _             __
+ | | | |___  ___ _ __  |_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___
+ | | | / __|/ _ \ '__|  | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \
+ | |_| \__ \  __/ |     | || | | | |_  __/ |  |  _| (_| | (__  __/
+  \___/|___/\___|_|    |___|_| |_|\__\___|_|  |_|  \__,_|\___\___|
+  _____ _                           _       
+ | ____| | ___ _ __ ___   ___ _ __ | |_ ___ 
+ |  _| | |/ _ \ '_ ` _ \ / _ \ '_ \| __/ __|
+ | |___| |  __/ | | | | |  __/ | | | |_\__ \
+ |_____|_|\___|_| |_| |_|\___|_| |_|\__|___/
+
+These are the styles that define the main recurring elements
+********************************************************************/
+
+/**************************************************
+* My Horizontal menu, based on an "Unordered List"
+* (ul), with "List Items" inside (li)
+***************************************************/
+/** I want to target unordered lists that have a class of "menu" **/
+ul.menu{
+	list-style:none;,/** and I don't want them to look like lists **/
+	width:100%;/** and I set them to maximum width so they can accomodate items near each other on a line **/
+}
+/** Now let's style the list-items that are inside <ul>s of class "menu" **/
+ul.menu li{
+	display:inline-block; /** This is essentially the same as a float, but it takes whitespace into account **/
+	position:relative; /** this allows us to put elements that are absolutely positioned **/
+}
+/**************************************************
+* Here we target anchors (links) that are inside
+* list items that are inside lists of class ".menu"
+* We could as easily have written
+* ul.menu li a
+* without the ">", but we don't want this style to
+* apply to <a>s very deep in the hierarchy, only
+* to the direct descendants.
+***************************************************/
+ul.menu>li>a{
+	text-decoration:none; /** removing the underline from the link **/
+	display:block;/** setting it as a block element (by default, a link is an inline element) **/
+	background:#0C0C0C;/** giving it a background **/
+	padding:5px;/** giving it a padding all around **/
+	-webkit-border-radius: 5px;/** nice rounded corners for chrome/safari **/
+	-moz-border-radius: 5px;/** nice rounder corners for firefox **/
+	border-radius: 5px; /** noce rounded corners for the latest browsers (maybe?) **/
+	font-weight:bold;/** setting the font as bold **/
+}
+ul.menu .searchbox{
+	display:block;
+	float:right;
+}
+/**************************************************
+* Now Let's style the subMenus.
+* Here we target an unordered list that is inside
+* an unordered list that has a class of menu.
+* In other words: IF you find an <ul>, check if
+* it has a class of "menu". IF yes, check if there
+* is an unordered list inside.
+***************************************************/
+ul.menu ul{
+	list-style:none; /** I don't want lists inside lists to look like lists either **/
+	position:absolute;
+	background:rgba(0,0,0,0.5);
+	width:130px;
+	padding:5px;
+}
+ul.menu>li ul{
+	display:none; /** we want to hide the submenus **/
+}
+ul.menu>li:hover ul{
+	display:block;/** but on hover of the list item, we want to show it **/
+}
+ul.menu li ul li{
+	display:list-item; /** finally, we restore the normal list-style for list items that are deep inside **/
+}
+ul.menu li ul li a:hover{
+	text-decoration:text-underline /** and restore the underline on hover too **/
+}
+/************************************************
+* This is my box of links on the bottom 
+* Since it is only used once, I could've
+* used an ID of "LinksBlocks". But I
+* figured that I might have, in the future,
+* other "linksblocks" that would look the same,
+* so I decided to make it a class so it is
+* reusable
+***********************************************/
+.linksBlock{
+	float:left;
+	display:block;
+	width:400px;
+}
+.linksBlock a{
+	background:#8029FF;
+	width:60px;
+	height:60px;
+	display:block; /** setting the links inside the linksblocks as block-level elements so we can give them width and height **/
+	float:left;
+	margin:5px;
+	position:relative;/** setting this as relative allows us to set a child as absolute **/
+	border:1px solid transparent;/** this adds a border. Instead of solid, you can use "dashed", or "dotted". There are others, you can google **/
+	overflow:hidden; /** this means: if the content inside is larger than the container,
+						crop the content. Another valid value is "scroll", which will
+						add scrollbars, and "auto", which will let the browser decide.
+						If that browser is internet explorer, it will add two scrollbars
+						anyway.
+						******/
+}
+.linksBlock img{
+	position:absolute; /** since the parent has a position: relative, we can set this to absolute without problems **/
+	width:48px;
+	height:48px;
+	display:block;
+	margin:6px 0 0 6px;
+}
+.linksBlock span{
+	position:absolute;/** we set this to absolute too **/
+	bottom:-25px; /** I set this very low; since our container has overflow: hidden, our span will not show **/
+	left:0;
+	height:20px;
+	background:#FDFDFD;
+	color:#000000;
+	font-weight:bold;
+	display:block;
+	opacity:0.7;
+	padding:2px 0 2px 0;
+	text-align:center;
+	width:100%;
+	/** the following allows animations **/
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out; /** shock! IE supports this **/
+	transition: all 0.3s ease-in-out;
+}
+.linksBlock a:hover{
+	border-color:white;
+}
+.linksBlock a:hover span{
+	bottom:0; /** But if we hover the containing link, then we restore the bottom to 0; On browsers that support it, there will be a transition **/
+}
+/*** END UI ELEMENTS ***/
+
+/*********************************
+  _____
+ |  ___|__  _ __ _ __ ___  ___
+ | |_ / _ \| '__| '_ ` _ \/ __|
+ |  _| (_) | |  | | | | | \__ \
+ |_|  \___/|_|  |_| |_| |_|___/
+
+*********************************/
+/** this is the main wrapper around the contact form **/
+.contact-form{
+	width:310px;
+	background:#0C0C0C;
+	float:right; /** we want this to float on the right **/
+	padding:5px;
+}
+.contact-form input, .contact-form textarea, .contact-form label{
+	width:200px;
+	float:left;
+	margin-top:10px;
+}
+.contact-form textarea{
+	height:100px;
+}
+.contact-form label{
+	width:100px;
+}
+/*****************************************
+* TADAH! New selector. This targets inputs
+* that have a property type of value
+* "submit". In other words:
+* <input type="submit" value="go">
+* will match, but
+* <input type="coolButton" value="go">
+* will not, and
+* <input class="submit" value="go">
+* will not.
+* Of course, IE has a bunch of problems
+* with this but I think it works reliably
+* since 8 onwards
+****************************************/
+.contact-form input[type="submit"]{
+	width:100px;
+	float:right;
+}
+/*** END OF FORMS ***/
+
+/*************************************************
+  ____                      _     ____            
+ / ___|  ___  __ _ _ __ ___| |__ | __ )  _____  __
+ \___ \ / _ \/ _` | '__/ __| '_ \|  _ \ / _ \ \/ /
+  ___) |  __/ (_| | | | (__| | | | |_) | (_) >  < 
+ |____/ \___|\__,_|_|  \___|_| |_|____/ \___/_/\_\
+                                                  
+**************************************************/
+.searchbox {
+	width:124px;
+	padding:5px;
+	background-image:url("../images/search.png"); /** setting the magnifier background **/
+	background-color:white;
+	background-repeat:no-repeat;
+	background-position:2px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px; 
+}
+.searchbox input{
+	width:100px;
+	border:none;
+	padding:1px;
+	background:transparent;
+	float:right;
+}
+/**************************************************
+* I need the submit to be valid, but I don't want
+* to show it (don't do this, it's not good from a
+* UI point of view, but since it is an example, 
+* I don't give a damn)
+* So I hide it.
+***************************************************/
+.searchbox input[type="submit"]{display:none;}
+/** this is my search label. By using position: absolute, I can trick it and make it look as if it is inside the input field **/
+.searchbox .input-search-label{
+	position:absolute;
+	top:3px;
+	left:34px;
+}
+/** finally, when the mouse is over the search box, we want to remove the label **/
+.searchbox:hover .input-search-label{display:none;}
+/*** END SEARCHBOX ***/
+
+/***************************************************
+  ____                  _  __ _
+ / ___| _ __   ___  ___(_)/ _(_) ___ ___ 
+ \___ \| '_ \ / _ \/ __| | |_| |/ __/ __|
+  ___) | |_) |  __/ (__| |  _| | (__\__ \
+ |____/| .__/ \___|\___|_|_| |_|\___|___/
+       |_|                               
+
+***************************************************/
+/** Now, the logo **/
+#Header h1, #Header h2{margin:0;}
+/******************************************************************
+* here I am targetting any <a> that is inside an <h1> that is inside #Header.
+* I am effectivevely targetting only one object so I could just as well
+* use an ID, but I'd rather give another example of complex targetting
+********************************************************************/
+#Header h1 a{
+	background: url("../images/logo.png") no-repeat scroll 0 0 transparent;/** setting the background **/
+	display: block;/** setting the element as a block so we can give it weight **/
+	height: 51px;
+	width: 194px;
+	overflow:hidden; /** we hide anything that is larger than the container **/
+	text-indent: -99999px;/** and we send the text away! So no text anymore in the container. **/
+}
+#Header h1 a:hover{opacity:0.7}
+#Header h2{
+	color: rgba(255, 255, 255, 0.698);
+	margin-bottom: 30px;
+	font-size:14px;
+	font-weight:normal;
+}
+#Header h2 em{font-weight:bold;color:white;}
+#Main{margin-top:100px;}
+#Footer{background:black;margin-top:90px;}
+/*** END SPECIFICS ***/

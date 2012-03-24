@@ -1,0 +1,188 @@
+<!-- This is the doctype. It tells the browser which type of HTML to use -->
+<!DOCTYPE html>
+<!-- the document tree -->
+<html>
+	<!--------------------------------------------------------
+	--         _   _                _
+	--        | | | | ___  __ _  __| |
+	--        | |_| |/ _ \/ _` |/ _` |
+	--        |  _  |  __/ (_| | (_| |
+	--        |_| |_|\___|\__,_|\__,_|
+	--
+	--  Here begins the head. Everything in the head is for the browser
+	--------------------------------------------------------->
+	<head>
+		<!-- This is the title -->
+		<title>Test Webpage</title>
+		<!-- Here the encoding is defined -->
+		<meta charset="utf-8">
+		<!-- That tells the iphone to not scale the page -->
+		<meta name="viewport" content="width=device-width">
+		<!-- Let's begin linking stylesheets! -->
+		<link rel="stylesheet" href="css/reset.css" type="text/css"/><!-- This is the reset -->
+		<link rel="stylesheet" href="css/style.css" type="text/css"/><!-- This our own theme -->
+		<link rel="stylesheet" href="css/media.css" type="text/css"/><!-- These are our media queries -->
+		<link rel="stylesheet" href="css/masonry.css" type="text/css"/><!-- This is some additional css required by the jquery plugin -->
+		<!-- Now some javascript -->
+		<!-- first we add the file we want to add in -->
+		<script style="text/javascript" src="javascript/jquery.min.js"></script>
+		<script style="text/javascript" src="javascript/jquery.isotope.min.js"></script>
+		<!-- then we add our own javascript in the page (we could also link an external file but for one line it's not worth it) -->
+		<script style="text/javascript">
+			$(function(){
+				$('#Main').isotope({
+					itemSelector : '.block'
+				});
+			})
+		</script>
+	</head>
+	<!--------------------------------------------------------
+	--      ____            _
+	--     | __ )  ___   __| |_   _
+	--     |  _ \ / _ \ / _` | | | |
+	--     | |_) | (_) | (_| | |_| |
+	--     |____/ \___/ \__,_|\__, |
+	--                        |___/
+	--
+	--   This is the body; it is the actual webpage the user sees
+	--------------------------------------------------------->
+	<!-- Beginning of MainWrapper, the division that will hold the whole site -->
+	<body><div id="MainWrapper" class="wrapper">
+		<!-------------------------------
+		 _____           _
+		|  |  |___ ___ _| |___ ___
+		|     | -_| .'| . | -_|  _|
+		|__|__|___|__,|___|___|_|
+		
+		---------------------------------->
+		<div id="Header" class="section">
+			<!-- Beginning of the logo space -->
+			<div class="logo">
+				<h1><a href="#">Test Website</a></h1>
+				<h2>A Test Webpage to Learn <em>HTML</em> &amp; <em>CSS</em> (and a bit of javascript)</h2>
+			</div>
+			<!-- End of the logo space -->
+			<!-- Beginning of the menu -->
+			<ul class="menu horizontal">
+				<!-- Menu Items -->
+				<li><a href="#">Menu Item 1</a></li>
+				<li><a href="#">Menu Item 2</a></li>
+				<li><a href="#">Menu Item 3</a></li>
+				<li><a href="#">Menu Item 4</a></li>
+				<li>
+					<a href="#">Menu Item 5</a>
+					<!-- Another list inside the menu item -->
+					<ul>
+						<li><a href="#">SubMenuItem 1</a></li>
+						<li><a href="#">SubMenuItem 2</a></li>
+						<li><a href="#">SubMenuItem 3</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Menu Item 6</a>
+					<!-- Yet another list inside the menu item -->
+					<ul>
+						<li><a href="#">SubMenuItem 1</a></li>
+						<li><a href="#">SubMenuItem 2</a></li>
+						<li><a href="#">SubMenuItem 3</a></li>
+					</ul>
+				</li>
+				<!-- Beginning of searchbox -->
+				<li class="searchbox">
+					<!-- Beginning of the form -->
+					<form name="search" action="/" method="get">
+						<!-- Beginning of searchbox -->
+						<label for="input-search" class="input-search-label">search</label>
+						<!-- beginning of the input -->
+						<input type="text" class="input-search" value="" id="input-search" name="query">
+						<!-- submit button -->
+						<input type="submit" class="input-submit" value="go">
+					</form>
+					<!-- end of the form -->
+				</li>
+			</ul>
+			<!-- End of the menu -->
+			<div class="clear"></div><!-- clear class, for the floats -->
+		</div>
+		<!-- End of Header -->
+		<!-------------------------
+		 _____     _
+		|     |___|_|___
+		| | | | .'| |   |
+		|_|_|_|__,|_|_|_|
+		
+		--------------------------->
+		<div class="section" id="Main">
+			<!-- block -->
+			<div class="block">
+				<h2>Some Title</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet tortor sed lacus interdum volutpat. Aliquam eu est nec velit imperdiet mattis. Nam metus tortor, tincidunt ut lacinia vel, interdum nec eros. Quisque egestas tempus rhoncus. Praesent eu diam nibh, id porta nunc. Nullam tempus faucibus convallis. Nunc in erat dolor, pretium egestas dolor. </p>
+			</div>
+			<!-- block -->
+			<div class="block">
+				<h2>Some Other Title</h2>
+				<p>Quisque egestas tempus rhoncus. Praesent eu diam nibh, id porta nunc. Nullam tempus faucibus convallis. Nunc in erat dolor, pretium egestas dolor. </p>
+			</div>
+			<!-- block -->
+			<div class="block">
+				<h2>Some Third Title</h2>
+				<p>Aliquam eu est nec velit imperdiet mattis. Nam metus tortor, tincidunt ut lacinia vel, interdum nec eros. Quisque egestas tempus rhoncus. Praesent eu diam nibh, id porta nunc. Nullam tempus faucibus convallis. Nunc in erat dolor, pretium egestas dolor. </p>
+			</div>
+			<!-- block -->
+			<div class="block">
+				<h2>Yet Another Title</h2>
+				<p>Aliquam eu est nec velit imperdiet mattis. Nam metus tortor, tincidunt ut lacinia vel, interdum nec eros. Quisque egestas tempus rhoncus. Praesent eu diam nibh, id porta nunc. Nullam tempus faucibus convallis. Nunc in erat dolor, pretium egestas dolor. </p>
+			</div>
+			<!-- block -->
+			<div class="block">
+				<h2>And Yet</h2>
+				<p>Aliquam eu est nec velit imperdiet mattis. Nam metus tortor, tincidunt ut lacinia vel, interdum nec eros. Quisque egestas tempus rhoncus. Praesent eu diam nibh, id porta nunc. Nullam tempus faucibus convallis. Nunc in erat dolor, pretium egestas dolor. </p>
+			</div>
+			<!-- block -->
+			<div class="block">
+				<h2>We can have many titles</h2>
+				<p>Aliquam eu est nec velit imperdiet mattis. Nam metus tortor, tincidunt ut lacinia vel, interdum nec eros. Quisque egestas tempus rhoncus. Praesent eu diam nibh, id porta nunc. Nullam tempus faucibus convallis. Nunc in erat dolor, pretium egestas dolor. </p>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!-- End of Main -->
+		<!-----------------------------
+		 _____         _
+		|   __|___ ___| |_ ___ ___
+		|   __| . | . |  _| -_|  _|
+		|__|  |___|___|_| |___|_|
+		
+		------------------------------>
+		<div class="section" id="Footer">
+			<!-- The links block on the left -->
+			<div class="linksBlock">
+				<a href="#"><img src="images/icons/01.png" width="48" height="48" alt="Abcd" /><span>Abcd</span></a>
+				<a href="#"><img src="images/icons/02.png" width="48" height="48" alt="Efgh"/><span>Efgh</span></a>
+				<a href="#"><img src="images/icons/03.png" width="48" height="48" alt="Ijkl"/><span>Ijkl</span></a>
+				<a href="#"><img src="images/icons/04.png" width="48" height="48" alt="Mnop"/><span>Mnop</span></a>
+				<a href="#"><img src="images/icons/05.png" width="48" height="48" alt="Qrst"/><span>Qrst</span></a>
+				<a href="#"><img src="images/icons/06.png" width="48" height="48" alt="Uvw"/><span>Uvw</span></a>
+				<a href="#"><img src="images/icons/07.png" width="48" height="48" alt="Xyz"/><span>Xyz</span></a>
+				<a href="#"><img src="images/icons/08.png" width="48" height="48" alt="Qwerty"/><span>Qwerty</span></a>
+				<a href="#"><img src="images/icons/09.png" width="48" height="48" alt="Asdf"/><span>Asdf</span></a>
+				<a href="#"><img src="images/icons/10.png" width="48" height="48" alt="Zxcv"/><span>Zxcv</span></a>
+			</div>
+			<!-- form to email you -->
+			<div class="contact-form">
+				<form action="mailto:mail@something.com" method="get" name="contact">
+					<!-- fields -->
+					<fieldset>
+						<legend>Contact Us</legend>
+						<label for="contact-name">Your Name<em>*</em></label><input type="text" name="name" id="contact-name"/>
+						<label for="contact-email">Your Email<em>*</em></label><input type="text" name="email" id="contact-email"/>
+						<label for="contact-text">Your Message<em>*</em></label><textarea name="text" id="contact-text"></textarea>
+						<input type="submit" value="&raquo;"/>
+					</fieldset>
+					<!-- end of fields -->
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!-- End of Footer -->
+	</div><!-- End of MainWrapper --></body><!-- End of Body -->
+</html>
