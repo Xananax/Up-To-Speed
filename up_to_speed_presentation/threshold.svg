@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="604"
+   height="504"
+   id="svg2">
+  <defs
+     id="defs4">
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter3770">
+      <feGaussianBlur
+         result="result8"
+         stdDeviation="2"
+         id="feGaussianBlur3772" />
+      <feOffset
+         result="result11"
+         dy="1"
+         dx="2"
+         id="feOffset3774" />
+      <feComposite
+         in2="result11"
+         operator="in"
+         in="SourceGraphic"
+         result="result6"
+         id="feComposite3776" />
+      <feFlood
+         flood-color="rgb(0,0,0)"
+         flood-opacity="1"
+         in="result6"
+         result="result10"
+         id="feFlood3778" />
+      <feBlend
+         in2="result10"
+         mode="normal"
+         in="result6"
+         result="result12"
+         id="feBlend3780" />
+      <feComposite
+         in2="SourceGraphic"
+         operator="in"
+         result="result2"
+         id="feComposite3782" />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-24.78125,-267)"
+     id="layer1">
+    <path
+       d="m 557.60419,638.19963 -470.731074,0 0,-241.42645"
+       id="rect2985"
+       style="fill:none;stroke:#000000;stroke-opacity:1" />
+    <path
+       d="m 517.21875,303.34375 c 0,0 -39.19883,52.72396 -54.75,82.15625 -20.33341,38.48319 -23.76111,91.93441 -32.5,138.59375 -4.36944,23.32967 -10.0415,44.9422 -19.53125,62.03125 -9.48975,17.08905 -22.63439,29.65135 -42.4375,35.53125 -13.98211,4.15154 -26.3455,1.46637 -38.40625,-5.4375 -12.06075,-6.90387 -23.64265,-18.11146 -35.21875,-30.75 -23.1522,-25.27708 -46.14829,-56.21885 -75.1875,-68.75 -19.40841,-8.37522 -49.76027,-14.65508 -75.40625,-18.9375 C 118.13527,493.49883 97.25,491.25 97.25,491.25 l -0.53125,4.96875 c 0,0 20.76079,2.24376 46.25,6.5 25.48921,4.25624 55.73133,10.61597 74.21875,18.59375 27.13707,11.71032 50.10309,41.98701 73.5,67.53125 11.69846,12.77212 23.52471,24.34504 36.40625,31.71875 12.88154,7.37371 26.96826,10.46223 42.3125,5.90625 21.10655,-6.26691 35.43096,-20.03036 45.375,-37.9375 9.94404,-17.90714 15.68358,-39.98411 20.09375,-63.53125 8.82035,-47.09429 12.46066,-100.17591 32,-137.15625 15.07587,-28.53273 54.34375,-81.5 54.34375,-81.5 l -4,-3 z"
+       id="path3764"
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#6b90ff;fill-opacity:1;stroke:none;stroke-width:5;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3770);enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+    <text
+       x="-635.03094"
+       y="77.022171"
+       transform="matrix(0,-1,1,0,0,0)"
+       id="text3756"
+       xml:space="preserve"
+       style="font-size:21.31617546px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#7d7777;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="-635.03094"
+         y="77.022171"
+         id="tspan3758">creativity</tspan></text>
+    <text
+       x="89.539009"
+       y="664.35992"
+       id="text3760"
+       xml:space="preserve"
+       style="font-size:21.31617546px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#7d7777;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="89.539009"
+         y="664.35992"
+         id="tspan3762">time</tspan></text>
+    <text
+       x="98.994949"
+       y="723.05249"
+       id="text3786"
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#56509a;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="98.994949"
+         y="723.05249"
+         id="tspan3788">Learning HTML &amp; CSS</tspan></text>
+    <text
+       x="98.994949"
+       y="751.33679"
+       id="text3790"
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#56509a;fill-opacity:1;stroke:none;font-family:Sans"><tspan
+         x="98.994949"
+         y="751.33679"
+         id="tspan3792">(not based on any tangible data)</tspan></text>
+  </g>
+</svg>
